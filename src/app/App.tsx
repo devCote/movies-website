@@ -10,7 +10,6 @@ export const App = () => {
         <div className={classNames("app", {}, [theme])}>
             <Navbar />
             <RouteProvider />
-            <button onClick={toggleTheme}>Toggle Theme</button>
         </div>
     );
 };
