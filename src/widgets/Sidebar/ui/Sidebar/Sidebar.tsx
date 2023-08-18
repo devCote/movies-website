@@ -10,7 +10,7 @@ interface SidebarProps {
 }
 
 export const Sidebar = ({ className, children }: SidebarProps) => {
-    const [collapsed, toggleCollapse] = useState(false);
+    const [collapsed, toggleCollapse] = useState(true);
     const { theme, toggleTheme } = useTheme();
 
     const onToggle = () => {
