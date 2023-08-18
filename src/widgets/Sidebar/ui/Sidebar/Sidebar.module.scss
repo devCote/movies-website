@@ -1,16 +1,29 @@
 .Sidebar {
   height: calc(100vh - var(--navbar-height));
-  // width: var(--sidebar-width);
-  width: 300px;
+  width: var(--sidebar-width);
   background: var(--inverted-bg-color);
 
   position: relative;
-  transition:width 0.55s;
-  -webkit-transition: width .55s;
-  -moz-transition: width 0.55s;
+  transition:width 0.35s;
+  -webkit-transition: width .35s;
+  -moz-transition: width 0.35s;
+  text-align: center;
+  padding-top: 10px;
 }
 
 .collapsed {
-  // width: var(--sidebar-width-callapsed);
-  width: 80px;
+  width: var(--sidebar-width-collapsed);
+}
+
+.Button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.SidebarIcon {
+  height: 40px;
+  width: 30px;
+  fill: var(--primary-color)
 }
