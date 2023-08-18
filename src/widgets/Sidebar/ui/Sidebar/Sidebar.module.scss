@@ -1,0 +1,16 @@
+.Sidebar {
+  height: calc(100vh - var(--navbar-height));
+  // width: var(--sidebar-width);
+  width: 300px;
+  background: var(--inverted-bg-color);
+
+  position: relative;
+  transition:width 0.55s;
+  -webkit-transition: width .55s;
+  -moz-transition: width 0.55s;
+}
+
+.collapsed {
+  // width: var(--sidebar-width-callapsed);
+  width: 80px;
+}

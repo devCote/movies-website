@@ -1,7 +1,7 @@
-import { RouteProvider, useTheme } from "app/providers";
+import { AppRouter, useTheme } from "app/providers";
 import { classNames } from "shared";
 import "./styles/index.scss";
-import { Navbar } from "widgets";
+import { Navbar, Sidebar } from "widgets";
 
 export const App = () => {
     const { theme, toggleTheme } = useTheme();
@@ -9,7 +9,10 @@ export const App = () => {
     return (
         <div className={classNames("app", {}, [theme])}>
             <Navbar />
-            <RouteProvider />
+            <div className="content-page">
+                <Sidebar />
+            <AppRouter />
+            </div>
         </div>
     );
 };

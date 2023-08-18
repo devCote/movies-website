@@ -4,9 +4,9 @@ import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import { BuildOprions } from './types/config'
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
-
-export function buildPlugins({paths}: BuildOprions): webpack.WebpackPluginInstance[] {
+export function buildPlugins({paths, isDev}: BuildOprions): webpack.WebpackPluginInstance[] {
 
   const progressPlugin = new webpack.ProgressPlugin()
 
@@ -20,10 +20,21 @@ export function buildPlugins({paths}: BuildOprions): webpack.WebpackPluginInstan
     chunkFilename: 'css/[name].[contenthash:8].css'
   })
 
+  const definePlugin = new webpack.DefinePlugin({
+    __IS_DEV__: JSON.stringify(isDev)
+  })
+
+  const copyPlugin = new CopyWebpackPlugin({
+    patterns: [
+        { from: "public/locales/", to: "locales" }
+    ]})
+
   return [
     progressPlugin,
     htmlPlugin,
-    miniCssPlugin
+    miniCssPlugin,
+    definePlugin,
+    copyPlugin
   ]
   
 }
