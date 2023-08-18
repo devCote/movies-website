@@ -14,14 +14,10 @@ export const ThemeSwitcher = ({ className, text }: ThemeSwitcherProps) => {
     return (
         <Button
             theme={ThemeButton.CLEAR}
-            className={classNames(cls.ThemeSwitcher, {}, [className])}
+            className={classNames(cls.ThemeSwitcherButton, {}, [className])}
             onClick={toggleTheme}
         >
-            {theme === Theme.DARK ? (
-                <ThemeIcon height={"14px"} fill="white" width={"14px"} />
-            ) : (
-                <ThemeIcon height={"14px"} width={"14px"} />
-            )}{" "}
+            <ThemeIcon className={cls.ThemeIcon} />
             {text}
         </Button>
     );

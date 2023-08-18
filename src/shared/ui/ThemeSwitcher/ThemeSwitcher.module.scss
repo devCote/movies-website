@@ -1,4 +1,10 @@
-.ThemeSwitcher {
+.ThemeSwitcherButton {
   padding: 6px 6px 0px 6px;
   background: none;
+}
+
+.ThemeIcon {
+  width: 30px;
+  height: 30px;
+  fill: var(--primary-color)
 }
