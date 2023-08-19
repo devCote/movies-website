@@ -3,6 +3,7 @@ module.exports = {
         browser: true,
         es2021: true,
         node: true,
+        jest: true,
     },
     extends: [
         'plugin:react/recommended',
@@ -37,6 +38,7 @@ module.exports = {
         'import/prefer-default-export': 'off',
         'react/jsx-uses-react': 'off',
         'react/react-in-jsx-scope': 'off',
+        'max-len': [2, { comments: 120 }],
         'no-unused-vars': 'warn',
         'react/require-default-props': 'off',
         'react/jsx-props-no-spreading': 'warn',
