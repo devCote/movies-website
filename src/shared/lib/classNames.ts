@@ -10,7 +10,7 @@ export function classNames(
         ...additional.filter(Boolean),
         ...Object.entries(mods)
             // eslint-disable-next-line
-            .filter(([_classname, value]) => Boolean(value))
+            .filter(([_className, value]) => Boolean(value))
             .map(([className]) => className),
     ].join(' ')
 }
