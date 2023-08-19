@@ -23,7 +23,7 @@ export function buildPlugins({
     const copyPlugin = new CopyWebpackPlugin({
         patterns: [{ from: 'public/locales/', to: 'locales' }],
     })
-    const hotReloadPlugin = new webpack.HotModuleReplacementPlugin()
+    // const hotReloadPlugin = new webpack.HotModuleReplacementPlugin()
     // const bundleAnalyzer = new BundleAnalyzerPlugin({openAnalyzer:false});
 
     const plugins = [
@@ -35,7 +35,7 @@ export function buildPlugins({
         // bundleAnalyzer,
     ]
 
-    if (isDev) plugins.push(hotReloadPlugin)
+    // if (isDev) plugins.push(hotReloadPlugin)
 
     return plugins
 }
