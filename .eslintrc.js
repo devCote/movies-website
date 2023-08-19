@@ -38,7 +38,7 @@ module.exports = {
         'import/prefer-default-export': 'off',
         'react/jsx-uses-react': 'off',
         'react/react-in-jsx-scope': 'off',
-        'max-len': [2, { comments: 120 }],
+        'max-len': [2, { comments: 120, code: 90 }],
         'no-unused-vars': 'warn',
         'react/require-default-props': 'off',
         'react/jsx-props-no-spreading': 'warn',
