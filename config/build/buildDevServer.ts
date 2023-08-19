@@ -1,5 +1,5 @@
-import { BuildOprions } from "./types/config";
-import type { Configuration as DevServerConfiguration } from "webpack-dev-server";
+import type { Configuration as DevServerConfiguration } from 'webpack-dev-server'
+import { BuildOprions } from './types/config'
 
 export function buildDevServer({
     port,
@@ -10,5 +10,5 @@ export function buildDevServer({
         open: false,
         static: paths.build,
         historyApiFallback: true,
-    };
+    }
 }

@@ -1,25 +1,19 @@
-import { classNames } from "shared";
-import cls from "./Sidebar.module.scss";
-import { ReactNode, useEffect, useState } from "react";
-import SidebarIcon from "shared/assets/icons/sidebarIcon.svg";
-import { Theme, useTheme } from "app/providers";
+import { classNames } from 'shared'
+import { ReactNode, useState } from 'react'
+import SidebarIcon from 'shared/assets/icons/sidebarIcon.svg'
+import cls from './Sidebar.module.scss'
 
 interface SidebarProps {
-    className?: string;
-    children?: ReactNode;
+    className?: string
+    children?: ReactNode
 }
 
 export const Sidebar = ({ className, children }: SidebarProps) => {
-    const [collapsed, toggleCollapse] = useState(true);
-    const { theme, toggleTheme } = useTheme();
+    const [collapsed, toggleCollapse] = useState(true)
 
     const onToggle = () => {
-        toggleCollapse((prev) => !prev);
-    };
-
-    useEffect(() => {
-        console.log({ cls });
-    }, []);
+        toggleCollapse((prev) => !prev)
+    }
 
     return (
         <div
@@ -28,9 +22,9 @@ export const Sidebar = ({ className, children }: SidebarProps) => {
             ])}
         >
             {children}
-            <button className={cls.Button} onClick={onToggle}>
+            <button type="button" className={cls.Button} onClick={onToggle}>
                 <SidebarIcon className={cls.SidebarIcon} />
             </button>
         </div>
-    );
-};
+    )
+}

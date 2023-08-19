@@ -1,17 +1,14 @@
-import { Link } from "react-router-dom";
-import { AppLink, ThemeSwitcher, classNames } from "shared";
-import cls from "./Navbar.module.scss";
-import { AppLinkTheme } from "shared";
-import { useTranslation } from "react-i18next";
-import { LangSwitcher } from "shared/ui/LangSwitcher/LangSwitcher";
+import { AppLink, AppLinkTheme, ThemeSwitcher, classNames } from 'shared'
+import { useTranslation } from 'react-i18next'
+import { LangSwitcher } from 'shared/ui/LangSwitcher/LangSwitcher'
+import cls from './Navbar.module.scss'
 
 interface NavbarProps {
-    className?: string;
+    className?: string
 }
 
 export const Navbar = ({ className }: NavbarProps) => {
-
-   const { t } = useTranslation() 
+    const { t } = useTranslation()
 
     return (
         <div className={classNames(cls.navbar, {}, [cls[className]])}>
@@ -21,14 +18,14 @@ export const Navbar = ({ className }: NavbarProps) => {
                 <AppLink
                     theme={AppLinkTheme.SECONDARY}
                     className={cls.homeLink}
-                    to={"/"}
+                    to="/"
                 >
-                    {t("home")}
+                    {t('home')}
                 </AppLink>
-                <AppLink theme={AppLinkTheme.SECONDARY} to={"/about"}>
-                    {t("about")}
+                <AppLink theme={AppLinkTheme.SECONDARY} to="/about">
+                    {t('about')}
                 </AppLink>
             </div>
         </div>
-    );
-};
+    )
+}
