@@ -2,9 +2,11 @@ import { AboutPage, HomePage, Page404 } from 'pages'
 import { RouteProps } from 'react-router-dom'
 
 export enum AppRoutes {
+  /* eslint-disable */
     HOME = 'home',
     ABOUT = 'about',
     NOT_FOUND = 'not_found',
+  /* eslint-enable */
 }
 
 export const RoutePath: Record<AppRoutes, string> = {

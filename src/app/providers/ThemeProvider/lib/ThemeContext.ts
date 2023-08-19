@@ -1,12 +1,15 @@
 import { createContext } from 'react'
 
 export enum Theme {
+  // eslint-disable-next-line
     lIGHT = 'light',
+  // eslint-disable-next-line
     DARK = 'dark',
 }
 
 export interface ThemeContextProps {
     theme?: Theme
+  // eslint-disable-next-line
     setTheme?: (theme: Theme) => void
 }
 

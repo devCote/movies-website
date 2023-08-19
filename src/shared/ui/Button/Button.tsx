@@ -3,8 +3,10 @@ import { ButtonHTMLAttributes, FC, ReactNode } from 'react'
 import cls from './Button.module.scss'
 
 export enum ThemeButton {
+  /* eslint-disable */
     CLEAR = 'clear',
     BORDER = 'border',
+  /* eslint-enable */
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -19,7 +21,7 @@ export const Button: FC<ButtonProps> = (props) => {
         <button
             type="button"
             className={classNames(cls.Button, {}, [className, cls[theme]])}
-            {...otherProps}
+            {/*eslint-disable-line*/...otherProps}
         >
             {children}
         </button>

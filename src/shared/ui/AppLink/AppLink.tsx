@@ -4,8 +4,10 @@ import React, { FC } from 'react'
 import cls from './AppLink.module.scss'
 
 export enum AppLinkTheme {
+  /* eslint-disable */
     PRIMARY = 'primary',
     SECONDARY = 'secondary',
+  /* eslint-enable */
 }
 
 interface AppLinkProps {
@@ -28,7 +30,7 @@ export const AppLink: FC<AppLinkProps> = (props) => {
         <Link
             to={to}
             className={classNames(cls.AppLink, {}, [className, cls[theme]])}
-            {...otherProps}
+            {/*eslint-disable-line*/...otherProps}
         >
             {children}
         </Link>
