@@ -12,7 +12,7 @@ export const App = () => {
             <Suspense fallback="LOADING">
                 <Navbar />
 
-                <div className="content-page">
+                <div className="content_page">
                     <Sidebar />
                     <AppRouter />
                 </div>

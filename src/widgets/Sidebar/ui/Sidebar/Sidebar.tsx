@@ -17,13 +17,13 @@ export const Sidebar = ({ className, children }: SidebarProps) => {
 
     return (
         <div
-            className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
+            className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [
                 className,
             ])}
         >
             {children}
-            <button type="button" className={cls.Button} onClick={onToggle}>
-                <SidebarIcon className={cls.SidebarIcon} />
+            <button type="button" className={cls.button} onClick={onToggle}>
+                <SidebarIcon className={cls.sidebar_icon} />
             </button>
         </div>
     )

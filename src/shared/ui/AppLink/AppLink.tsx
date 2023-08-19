@@ -29,7 +29,7 @@ export const AppLink: FC<AppLinkProps> = (props) => {
     return (
         <Link
             to={to}
-            className={classNames(cls.AppLink, {}, [className, cls[theme]])}
+            className={classNames(cls.app_link, {}, [className, cls[theme]])}
             {/*eslint-disable-line*/...otherProps}
         >
             {children}
