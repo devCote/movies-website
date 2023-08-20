@@ -1,8 +1,16 @@
 {
   "extends": "stylelint-config-standard-scss",
   "rules": {
-    "indentation": [4],
+    "indentation": [
+      4
+    ],
     "selector-class-pattern": [
+      "^([a-z][a-z0-9]*)(_[a-z0-9]+)*$",
+      {
+        "message": "Expected custom property name to be snake-case"
+      }
+    ],
+    "keyframes-name-pattern": [
       "^([a-z][a-z0-9]*)(_[a-z0-9]+)*$",
       {
         "message": "Expected custom property name to be snake-case"
