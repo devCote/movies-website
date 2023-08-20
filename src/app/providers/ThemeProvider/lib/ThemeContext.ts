@@ -9,8 +9,7 @@ export enum Theme {
 
 export interface ThemeContextProps {
     theme?: Theme
-  // eslint-disable-next-line
-    setTheme?: (theme: Theme) => void
+    setTheme?: (_theme: Theme) => void
 }
 
 export const ThemeContext = createContext<ThemeContextProps>({})

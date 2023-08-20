@@ -4,5 +4,8 @@
   "ABOUT PAGE": "ABOUT PAGE",
   "home": "home",
   "about": "about",
-  "404": "Page not found"
+  "404": "Page not found",
+  "ErrorBoundary": "Something went wrong.",
+  "error-text": "There was an error on the page. Look info in console.",
+  "reload-page": "Reload the page"
 }
