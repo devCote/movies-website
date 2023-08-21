@@ -7,6 +7,8 @@ module.exports = {
     },
     extends: [
         'plugin:react/recommended',
+        'eslint:recommended',
+        'plugin:react/jsx-runtime',
         'airbnb',
         'plugin:i18next/recommended',
     ],
@@ -40,6 +42,9 @@ module.exports = {
         'react/react-in-jsx-scope': 'off',
         'max-len': [2, { comments: 120, code: 90 }],
         'react/jsx-uses-react': 'off',
+        //
+        'react/jsx-uses-vars': 'error',
+
         'react/require-default-props': 'off',
         'react/jsx-props-no-spreading': 'warn',
         'react/function-component-definition': 'off',
@@ -51,4 +56,12 @@ module.exports = {
     globals: {
         __IS_DEV__: true,
     },
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
+    ],
 }
