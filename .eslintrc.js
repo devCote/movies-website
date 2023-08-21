@@ -38,6 +38,7 @@ module.exports = {
             { extensions: ['.js', '.jsx', '.tsx'] },
         ],
         'import/no-unresolved': 'off',
+        'react/no-unused-prop-types': 'off',
         'import/prefer-default-export': 'off',
         'react/react-in-jsx-scope': 'off',
         'max-len': [2, { comments: 120, code: 90 }],
