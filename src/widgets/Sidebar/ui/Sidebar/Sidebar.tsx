@@ -1,14 +1,19 @@
 import { classNames } from 'shared'
-import { ReactNode, useState } from 'react'
+import { FC, ReactNode, useState } from 'react'
 import SidebarIcon from 'shared/assets/icons/sidebarIcon.svg'
 import cls from './Sidebar.module.scss'
 
 interface SidebarProps {
     className?: string
     children?: ReactNode
+    id?: string
 }
 
-export const Sidebar = ({ className, children }: SidebarProps) => {
+export const Sidebar: FC<SidebarProps> = ({
+    className,
+    children,
+    ...otherProps
+}) => {
     const [collapsed, toggleCollapse] = useState(true)
 
     const onToggle = () => {
@@ -17,12 +22,19 @@ export const Sidebar = ({ className, children }: SidebarProps) => {
 
     return (
         <div
+            data-testid="sidebar"
             className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [
                 className,
             ])}
+            {...otherProps}
         >
             {children}
-            <button type="button" className={cls.button} onClick={onToggle}>
+            <button
+                type="button"
+                data-testid="sidebar_toggle"
+                className={cls.button}
+                onClick={onToggle}
+            >
                 <SidebarIcon className={cls.sidebar_icon} />
             </button>
         </div>
