@@ -12,7 +12,6 @@ interface SidebarProps {
 export const Sidebar: FC<SidebarProps> = ({
     className,
     children,
-    ...otherProps
 }) => {
     const [collapsed, toggleCollapse] = useState(true)
 
@@ -26,7 +25,6 @@ export const Sidebar: FC<SidebarProps> = ({
             className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [
                 className,
             ])}
-            {...otherProps}
         >
             {children}
             <button

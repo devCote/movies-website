@@ -2,12 +2,8 @@ import { Button, ThemeButton, classNames } from 'shared'
 import { useTranslation } from 'react-i18next'
 import cls from './ErrorFallback.module.scss'
 
-interface ErrorFallbackProps {
-    className?: string
-}
-
 // Fallback page when error ocures in the app
-export const ErrorFallback = ({ className }: ErrorFallbackProps) => {
+export const ErrorFallback = () => {
     const { t } = useTranslation()
 
     const reloadPage = () => {
