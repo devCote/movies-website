@@ -11,6 +11,8 @@ module.exports = {
         'plugin:react/jsx-runtime',
         'airbnb',
         'plugin:i18next/recommended',
+        'plugin:storybook/recommended',
+        'plugin:storybook/recommended',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -41,7 +43,7 @@ module.exports = {
         'react/no-unused-prop-types': 'off',
         'import/prefer-default-export': 'off',
         'react/react-in-jsx-scope': 'off',
-        'max-len': [2, { comments: 120, code: 90 }],
+        'max-len': [2, { comments: 220, code: 90 }],
         'react/jsx-uses-react': 'off',
         //
         'react/jsx-uses-vars': 'error',
