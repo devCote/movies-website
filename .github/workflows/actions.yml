@@ -1,6 +1,6 @@
 name: Movies Web For All
 run-name: project checks
-on: [push, pull]
+on: [push]
 jobs:
   checks:
     runs-on: ubuntu-latest
