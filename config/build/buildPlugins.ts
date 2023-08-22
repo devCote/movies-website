@@ -2,12 +2,12 @@ import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
-import { BuildOprions } from './types/config'
+import { BuildOptions } from './types/config'
 
 export function buildPlugins({
     paths,
     isDev,
-}: BuildOprions): webpack.WebpackPluginInstance[] {
+}: BuildOptions): webpack.WebpackPluginInstance[] {
     const progressPlugin = new webpack.ProgressPlugin()
     const htmlPlugin = new HtmlWebpackPlugin({
         template: paths.html,

@@ -1,5 +1,5 @@
 import webpack from 'webpack'
-import { BuildOprions } from './types/config'
+import { BuildOptions } from './types/config'
 import { buildLoaders } from './buildLoaders'
 import { buildResolvers } from './buildResolves'
 import { buildPlugins } from './buildPlugins'
@@ -7,7 +7,7 @@ import 'webpack-dev-server'
 import { buildDevServer } from './buildDevServer'
 
 export function buildWebpackConfig(
-    options: BuildOprions
+    options: BuildOptions
 ): webpack.Configuration {
     const { paths, mode, isDev } = options
 
